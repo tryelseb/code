@@ -1,0 +1,62 @@
+#contact-screen{
+	padding: 6em 0 ;
+	min-height: 700px;
+	color: $black-color;
+	position: relative;
+	@media screen and (min-width: 800px){
+		&::after{
+			content: url("../images/contact-img.jpg");
+			position: absolute;
+			bottom: 12%;
+			right: 12%;
+		}
+	}
+	.decor-row{
+		height: 30px;
+		background-color: #2b2c36;
+	}
+	.mb{
+		margin-bottom: 1em;
+	}
+	.contact__input{
+		background-color: rgba($black-color, .3);
+		color: $white-color;
+	}
+	.contact__textarea{
+		background-color: rgba($black-color, .3);
+		color: $white-color;
+	}
+	.contact-all-content{
+		padding: 2em 0 2em;
+		position: relative;
+		z-index: 1;;
+		.ct-title{
+			font-size: 45px;
+			font-weight: 700;
+			line-height: 1.5;
+			text-transform: uppercase;
+			@media screen and (max-width: 700px){
+				font-size: 25px;
+			}
+			span{
+				color: #ffb404;
+				text-shadow: 0 2px 1px $white-color;
+			}
+		}
+		.ct-text{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.5;
+		}
+	}
+	.wrapper-form{
+		position: relative;
+		z-index: 1;
+		margin-bottom: 2em;
+		.contact__button{
+			@include m-button(transparent,#1796c6);
+			color: $black-color;
+			border: 2px solid #ffb404;
+		}
+	}
+}

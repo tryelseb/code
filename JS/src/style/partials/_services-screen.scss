@@ -1,0 +1,133 @@
+#services-section{
+	padding: 13em 0;
+	color: $white-color;
+	background-color: #000;
+	font-family: $main-font-family;
+	position: relative;
+	transition: 2s;
+	@media screen and (max-width: 1023px){
+		padding: 6em 0;
+	}
+	.wrap-icon{
+		margin-bottom: .3em;
+		& i {
+			font-size: 55px;
+			color: #fff;
+		}
+	}
+	.st-columns {
+		position: relative;
+		@include max-1023{
+			margin-bottom: 3em;
+		}
+		&:hover {
+			.content-wrapper::after, .content-wrapper::before{
+				animation: full .5s linear both;
+			}
+			.wrap-icon i{
+				color: $black-color;
+			}
+			.serv-title{
+				color: $black-color;
+			}
+			.serv-subtitle{
+				color: $black-color;
+			}
+		}
+		&:not(:hover){
+			.content-wrapper::after, .content-wrapper::before{
+				animation: bothh .5s linear;
+			}
+		}
+		.content-wrapper{
+			min-height: 280px;
+			background-color: rgba($black-color, .3);
+			cursor: pointer;
+			padding: 30px;
+			position: relative;
+			z-index: 2;
+			transition: all .5s;
+			display: flex;
+			flex-direction: column;
+			justify-content: baseline;
+			box-shadow: 0px 0px 10px 3px rgba($white-color,0.16);
+			&::before, &::after{
+				content: '';
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: transparent;
+				z-index: -1;
+				border-color: #ffb404;
+				border-style: solid;
+				animation-fill-mode: both;
+			}
+			&::before{
+				left: 0;
+				bottom: 0;
+				border-width: 0 0 2px 3px;
+			}
+			&::after{
+				right: 0;
+				top: 0;
+				border-width: 3px 2px 0 0;
+			}
+			@include max-1023{
+				min-height: 300px;
+			}
+			.wrap-icon{
+				margin-bottom: .7em;
+				.icon{
+					max-width: 50px;
+				}
+			}
+			.icon-wrapper{
+				margin-bottom: 35px;
+				display: flex;
+				justify-content: center;
+			}
+			.serv-title{
+				backface-visibility: hidden;
+				min-height: 30px;
+				text-transform: uppercase;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 1.5;
+				letter-spacing: 1px;
+				margin-bottom: .8em;
+				color: #334455;
+			}
+			.serv-subtitle{
+				backface-visibility: hidden;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.8;
+				@include max-1023{
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}	
+}
+@keyframes full {
+	100%{
+		width: 100%;
+		height: 100%;
+		background-color: #ffb404;
+	}
+}
+@keyframes bothh {
+	0%{
+		width: 100%;
+		height: 100%;
+		background-color: #ffb404;
+	}
+	100%{
+		width: 200px;
+		height: 200px;
+		background-color: transparent;
+	}
+}
