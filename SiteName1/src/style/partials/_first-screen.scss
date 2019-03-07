@@ -1,11 +1,11 @@
 .first-screen{
 	max-width: 100%;
-	min-height: 100vh;
-	background-color: #233888;
-	background-image: url($img-path + 'main-bg.jpg');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
+	height: 100vh;
+	min-height: 960px;
+	// background-image: url($img-path + 'main-bg.jpg');
+	// background-repeat: no-repeat;
+	// background-position: left top;
+	// background-size: cover;
 	font-family: $main-font;
 	color: #fff;
 	.main-header{
@@ -57,21 +57,72 @@
 			}
 		}
 	}
-	.wrap-title{
-		& > * {
-			font-weight: 300;
-			font-size: 48px;
-			line-height: 1;
-			letter-spacing: -2px;
+	.main-content{
+		.wrap-title{
+			position: relative;
+			z-index: 2;
+			padding: 180px 0;
+			& > * {
+				font-weight: 300;
+				font-size: 48px;
+				line-height: 1;
+				letter-spacing: -2px;
+			}
+			& span {
+				font-weight: 800;
+				font-size: 72px;
+				line-height: .9;
+			}
 		}
-		& span {
-			font-weight: 800;
-			font-size: 72px;
-			line-height: .9;
+		.all-link{
+			.wrapper-btn{
+				position: relative;
+				z-index: 1;
+				max-width: 265px;
+				margin-right: 20px;
+				&:before{
+					position: absolute;
+					content: '';
+					left: -98%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 560px;
+					height: 560px;		;
+					z-index: -1;
+					background-image: url($img-path + 'circle.png');
+				}
+				&:after{
+					position: absolute;
+					content: '';
+					left: -41%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 288px;
+					height: 315px;
+					z-index: -1;
+					background-image: url($img-path + 'blick.png');
+				}
+				&__btn{
+					@include button;
+				}
+			}
+			.video-link{
+				padding-left: 55px;
+				font-size: 16px;
+				font-weight: 200;
+				line-height: 1.4;
+				position: relative;
+				&:before{
+					content: url('../images/play.png');
+					position: absolute;
+					width: 38px;
+					height: 38px;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					z-index: 1;
+				}
+			}
 		}
-	}
-}
-
-.mb{
-	margin-bottom: 180px;
+	}	
 }

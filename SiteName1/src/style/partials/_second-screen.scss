@@ -1,0 +1,98 @@
+.second-screen{
+	padding: 94px 0 106px;
+	max-width: 100%;
+	// background-color: #233888;
+	// background-image: url($img-path + 'second-bg.jpg');
+	// background-repeat: no-repeat;
+	// background-position: left top;
+	// background-size: cover;
+	font-family: $main-font;
+	color: #fff;
+	.sc{
+		position: relative;
+		padding: 20px;
+		border-radius: 30px;
+		min-height: 491px;
+		background-color:  rgba(215, 1, 113, 0.4);
+		box-shadow: 0px 50px 70px 0px rgba(1, 1, 17, 0.1);
+		@media screen and (min-width: 550px){
+			padding: 50px;
+		}
+		@media screen and (min-width: 1000px){
+			padding: 100px 98px 66px 295px;
+		}
+		&:before{
+			@media screen and (min-width: 1000px){
+				content: '';
+				position: absolute;
+				width: 268px;
+				height: 313px;
+				top: -15%;
+				right: -5%;
+				background-image: url($img-path + "vr-2.png");
+			}
+			@media screen and (min-width: 1200px){
+				top: -15%;
+				right: 3%;
+			}
+		}
+		&__title{
+			margin-bottom: 20px;
+			@media screen and (min-width: 1000px){
+				position: absolute;
+				left: -20%;
+			}
+			& > *{
+				font-size: 60px;
+				letter-spacing: -3px;
+				line-height: 1;
+				font-weight: 800;
+			}
+		}
+		&__subtitle{
+			font-size: 30px;
+			letter-spacing: -1px;
+			line-height: 1;
+			font-weight: 400;
+			margin-bottom: 65px;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -100%;
+				width: 64px;
+				height: 2px;
+				background-image: linear-gradient(to right, #9f0f81 0%, #ff006e 100%);
+			}
+		}
+		&__text{
+			font-size: 16px;
+			letter-spacing: -1px;
+			line-height: 1.7;
+			font-weight: 300;
+			margin-bottom: 66px;
+		}	
+		&__btn{
+			@include button-s;
+			margin-bottom: 50px;
+			@media screen and (min-width: 1000px){
+				margin-bottom: 0;
+			}
+		}
+		.decor-img{
+			max-width: 100%;
+			&__img{
+				max-width: 100%;
+			}			
+			@media screen and (min-width: 1000px){
+				position: absolute;
+				bottom: 4%;
+				left: -31%;
+			}
+			@media screen and (min-width: 1200px){
+				bottom: -22%;
+			}
+		}
+	}
+}
