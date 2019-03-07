@@ -4,10 +4,12 @@
 	background-color: #233888;
 	background-image: url($img-path + 'main-bg.jpg');
 	background-repeat: no-repeat;
+	background-position: 50% 50%;
 	background-size: cover;
 	font-family: $main-font;
+	color: #fff;
 	.main-header{
-		padding: 77px 126px 0;
+		padding: 85px 0 0;
 		.lg-wrapper{
 			height: 100%;
 			.lg-link{
@@ -23,36 +25,53 @@
 				}
 			}
 		}
-	}
-	.main-menu{
-		height: 100%;
-		&__list{
+		.main-menu{
 			height: 100%;
-			display: flex;
-			align-items: center;
-		}
-		&__items{	
-			&:not(:last-child){
-				margin-right: 40px;
+			&__list{
+				height: 100%;
+				display: flex;
+				align-items: center;
 			}
-		}
-		&__link{
-			text-transform: capitalize;
+			&__items{	
+				&:not(:last-child){
+					margin-right: 40px;
+				}
+			}
+			&__link{
+				text-transform: capitalize;
 
+			}
 		}
-	}
-	.social-menu{
-		height: 100%;
-		&__list{
+		.social-menu{
 			height: 100%;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-		}
-		&__items{	
-			&:not(:last-child){
-				margin-right: 13px;
+			&__list{
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			&__items{	
+				&:not(:last-child){
+					margin-right: 13px;
+				}
 			}
 		}
 	}
+	.wrap-title{
+		& > * {
+			font-weight: 300;
+			font-size: 48px;
+			line-height: 1;
+			letter-spacing: -2px;
+		}
+		& span {
+			font-weight: 800;
+			font-size: 72px;
+			line-height: .9;
+		}
+	}
+}
+
+.mb{
+	margin-bottom: 180px;
 }
