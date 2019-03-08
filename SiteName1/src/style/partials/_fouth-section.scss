@@ -1,0 +1,105 @@
+.fouth-section{
+	color: #fff;
+	max-width: 100%;
+	.mb{
+		@media screen and (min-width: 1200px){
+			margin-bottom: 68px;
+		}
+	}
+	.cost{
+		text-align: center;
+	}
+	.bf-ct{
+		padding: 25px 55px;
+		border-radius: 20px;
+		background-color:  rgba(215, 1, 113, 0.15);
+		min-height: 364px;
+		@media screen and (max-width: 767px){
+			margin-bottom: 45px;
+		}
+		&__title{
+			margin-bottom: 20px;
+			@media screen and (min-width: 1200px){
+				margin-bottom: 56px;
+			}
+			& > *{
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 1.2;
+				min-height: 56px;
+				@media screen and (min-width: 1200px){
+					min-width: 0;
+				}
+			}
+		}
+		&__wrapper{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: column;
+			padding-bottom: 47px;
+			margin-bottom: 60px;
+			border-bottom: 2px dotted rgba(#fff, .4);
+			@media screen and (min-width: 1200px){
+				flex-direction: row;
+			}
+		}
+		&__img{
+			margin-bottom: 20px;
+			@media screen and (min-width: 1200px){
+				margin-right: 35px;
+				margin-bottom: 0;
+			}
+		}
+		&__time{
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 1;
+			color: rgba(#fff, .7);
+			min-width: 70px;
+			margin-bottom: 20px;
+			@media screen and (min-width: 1200px){
+				margin-right: 40px;
+				margin-bottom: 0;
+			}
+		}
+		&__text{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.8;
+			min-height: 84px;
+			text-align: justify;
+			@media screen and (min-width: 768px){
+				min-height: 112px;
+			}
+			@media screen and (min-width: 1200px){
+				text-align: left;
+			}
+		}
+		&__price{
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 1;
+			position: relative;
+			padding-right: 29px;
+			max-width: 98px;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 34px;
+				right: 0;
+				top: 0;
+				background-image: url($img-path + 'doll.png');
+			}
+		}
+	}
+	.cost{
+		font-size: 16px;
+		line-height: 1.5;
+		font-weight: 300;
+		background-image: linear-gradient(to right, #9f0f81 0%, #ff006e 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}

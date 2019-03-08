@@ -1,0 +1,46 @@
+.fifth-section {
+	padding: 75px 0;
+	color: #fff;
+	.srv{
+		&__list {
+			display: flex;
+			align-items: center;
+		}
+		.wrp-text{
+			min-height: 85px;
+		}
+		&__items {
+			min-width: 20%;
+			height: 155px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			&:not(:last-child){
+				border-right: 2px dotted rgba(#fff, .4);
+			}
+			&--images{
+				margin-bottom: 25px;
+			}
+			&--text {
+				width: 167px;
+				font-size: 15px;
+				font-weight: 300;
+				min-height: 51px;
+				line-height: 1.3;
+				text-align: center;
+
+				margin-bottom: 10px;
+				span {
+					font-size: 13px;
+					line-height: .8;
+					font-weight: 300;
+					color:  rgba(255, 255, 255, 0.4);
+				}
+			}
+			&--sales{
+				text-align: center;
+			}
+		}
+	}
+}
